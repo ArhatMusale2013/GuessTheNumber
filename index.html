@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+    background-image: url(https://content.instructables.com/FGE/F6F0/K1NVATVK/FGEF6F0K1NVATVK.jpg?auto=webp);
+    color: white;
+    text-align: center;
+}
+            </style>
+    </head>
+    <body>
+        <h1>Guess a number between 1 and 10:</h1>
+        <input type="number" id="number">
+        <button onclick="demo()">Submit Guess</button>
+        <p id="result"></p>
+        <script>
+            var div = Math.floor(Math.random()*10)
+            function demo(){
+                var guess = document.getElementById("number").value
+                if(guess < div){
+                    document.getElementById("result").innerHTML = "Too low."
+                }
+                else if(guess > div){
+                document.getElementById("result").innerHTML = "Too high."
+                }
+                else{
+                    document.getElementById("result").innerHTML = "Congrats you got it correct."
+                }
+            }
+        </script>
+    </body>
+</html>
